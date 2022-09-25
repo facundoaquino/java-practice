@@ -1,5 +1,6 @@
 package AppFacturas.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Factura {
@@ -17,7 +18,7 @@ public class Factura {
         this.descripcion = descripcion;
         this.cliente = cliente;
         this.items = new ItemFactura[MAX_ITEMS];
-        this.folio= ++ultimoFolio;
+        this.folio = ++ultimoFolio;
         this.fecha = new Date();
     }
 
@@ -57,5 +58,41 @@ public class Factura {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public float calcularTotal() {
+        float total = 0.0f;
+        for (ItemFactura item : this.items) {
+//            hay que validar que item no sea null
+            if (item == null) {
+                continue;
+            }
+            total += item.calcularImporte();
+        }
+        return total;
+    }
+
+    public String generarDetalle() {
+        StringBuilder sb = new StringBuilder("Facutura n° ");
+        sb.append(folio)
+                .append("\nCliente: ")
+                .append(this.cliente.getNombre())
+                .append("\t Nif: ")
+                .append(cliente.getNif());
+        SimpleDateFormat df = new SimpleDateFormat("dd 'de' MMMM, yyyy");
+        sb.append("Fecha factura: ")
+                .append(df.format(this.fecha));
+        for (ItemFactura item : this.items) {
+            if(item == null){
+                continue;
+            }
+            sb.append(item.getProducto().getCodigo())
+                    .append("\t")
+                    .append(item.getProducto().getNombre())
+                    .append("\t")
+                    .append(item.getProducto().getPrecio())
+                    .append(calcularTotal());
+        }
+        return sb.toString();
     }
 }
