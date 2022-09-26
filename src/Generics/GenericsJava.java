@@ -1,5 +1,7 @@
 package Generics;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,8 +15,14 @@ public class GenericsJava {
         clientes.add("some string 2");
         System.out.println("clientes = " + clientes);
         System.out.println("clientes = " + clientes.get(2));
+
+
+        List<String> nombres = fromArrayToList(new String[]{"name","name2","name3"}, 32);
+        nombres.forEach(System.out::println);
     }
 
+
+//
     public static <T> List<T> fromArrayToList(T[] c){
         return Arrays.asList(c);
     }
