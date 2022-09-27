@@ -13,6 +13,7 @@ public class ArrayListCollection {
 //        podemos indicar una capacidad minima , por defecto es 10 , si se pasa por atras crea una copia para agregar un nuevo elemento , es una cuestion de performance
         listaEmpleados.ensureCapacity(15);
         listaEmpleados.add(new Empleado("facu", 32, 140000));
+        listaEmpleados.add(new Empleado("facu", 32, 140000));
         listaEmpleados.add(new Empleado("ruben", 33, 170000));
         listaEmpleados.add(new Empleado("julieta", 28, 180000));
 
