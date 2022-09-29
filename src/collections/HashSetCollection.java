@@ -24,10 +24,14 @@ public class HashSetCollection {
         empleadosBanco.add(c4);
         empleadosBanco.add(c4);
 
+
+//        metodos equals y hashCode , son metodos de Object
+
         for (Empleado e: empleadosBanco
              ) {
             System.out.println("e.getNombre() = " + e.getNombre());
             System.out.println("e.hashCode() = " + e.hashCode());
+            System.out.println("e.equals(c1) = " + e.equals(c1));
         }
     }
 }
