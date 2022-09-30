@@ -11,6 +11,8 @@ public class HashSetCollection {
        Empleado c2 = new Empleado("facu", 32, 140000);
        Empleado c3 = new Empleado("ruben", 33, 170000);
        Empleado c4 = new Empleado("julieta", 28, 180000);
+       Empleado c5 = new Empleado("julieta", 28, 180000);
+       Empleado c6 = new Empleado("julieta", 28, 180000);
 
 //Esta es una buena práctica programar siempre orientado a interfaces y no a sus implementaciones concretas.
 
@@ -30,8 +32,8 @@ public class HashSetCollection {
         for (Empleado e: empleadosBanco
              ) {
             System.out.println("e.getNombre() = " + e.getNombre());
-            System.out.println("e.hashCode() = " + e.hashCode());
-            System.out.println("e.equals(c1) = " + e.equals(c1));
+//            System.out.println("e.hashCode() = " + e.hashCode());
+//            System.out.println("e.equals(c1) = " + e.equals(c1));
         }
     }
 }

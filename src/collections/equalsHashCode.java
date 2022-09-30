@@ -2,7 +2,7 @@ package collections;
 
 public class equalsHashCode {
     public static void main(String[] args) {
-        Libro libro1 = new Libro("papa", "facu", 123);
+        Libro libro1 = new Libro("papa", "facu", 1233);
         Libro libro2 = new Libro("papa", "facu", 123);
 
 //        tenemos que rescribir el metodo equals en la clase libro
