@@ -18,6 +18,12 @@ public class Libro {
         return super.toString();
     }
 
+//    el equals por defecto compara las posiciones de memoria
+/*  Si sobreescribe el método equals() es recomendable sobreescribir también el método hashCode()
+    para conservar el contrato
+    entre ambos métodos: dos objetos iguales deben retornar el mismo valor de hash.
+    El método equals() no llama al método hashCode() para determinar la igualdad de dos objetos.    */
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Libro) {
