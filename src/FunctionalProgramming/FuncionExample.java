@@ -12,5 +12,15 @@ public class FuncionExample {
         System.out.println("result = " + result);
 
 //        para 2 argumentos y un retorno ver BiFunction
+
+
+        Function<String, Integer> myFunction = param -> FuncionExample.multiplyWord(param);
+
+        System.out.println(myFunction.apply("pepernatol"));
+
     }
+    public static int multiplyWord(String word) {
+        return 10 * word.length();
+    }
+
 }
