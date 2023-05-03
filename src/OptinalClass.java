@@ -5,7 +5,7 @@ public class OptinalClass {
 
     public static void main(String[] args) {
         Optional<String> empty = Optional.ofNullable("a string");
-        System.out.println(empty.isEmpty());
+//        System.out.println(empty.isEmpty());
         System.out.println(empty.isPresent());
 
         String orElse = empty.orElse("world");
@@ -49,13 +49,13 @@ public class OptinalClass {
 
         //          ifPresentOrElse recibe dos parametros
 
-        Optional<String> optStr_3 = Optional.ofNullable("str");
-        optStr_3
-                .ifPresentOrElse(s1 -> {
-                    System.out.println(s1);
-                },() -> {
-                    System.out.println("or else option");
-                });
+//        Optional<String> optStr_3 = Optional.ofNullable("str");
+//        optStr_3
+//                .ifPresentOrElse(s1 -> {
+//                    System.out.println(s1);
+//                },() -> {
+//                    System.out.println("or else option");
+//                });
 
 
 //
