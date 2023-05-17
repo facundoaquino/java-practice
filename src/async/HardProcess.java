@@ -3,7 +3,7 @@ package async;
 public class HardProcess {
     public static int longTask() {
         try {
-            int duration = 1000 + (int) (Math.random() * 3000);
+            int duration = 1000 + (int) (Math.random() * 15000);
             Thread.sleep(duration);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
