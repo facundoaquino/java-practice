@@ -5,7 +5,7 @@ import java.util.concurrent.CompletableFuture;
 public class CompletableFApplyAsync {
     public static void main(String[] args) {
 
-        CompletableFuture.supplyAsync(HardProcess::longTask)
+        CompletableFuture.supplyAsync(() -> HardProcess.longTask())
                 .thenApply(integer -> doSomething(integer))
                 .thenAccept(integer -> System.out.println("integer modified.. = " + integer));
 
