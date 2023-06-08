@@ -18,7 +18,10 @@ public class CompletableFThenCombine {
         spleep(10000);
     }
 
-    public static CompletableFuture<Integer> getValueAsync(int value) {
+    public static CompletableFuture<Integer> getValueAsync(int value) throws InterruptedException {
+        System.out.println("get value iniciando..");
+        spleep(2000);
+
         return CompletableFuture.supplyAsync(() -> {
             try {
                 return processValue(value);
@@ -28,7 +31,10 @@ public class CompletableFThenCombine {
         });
     }
 
-    public static CompletableFuture<Integer> getValueAsync2(int value) {
+    public static CompletableFuture<Integer> getValueAsync2(int value) throws InterruptedException {
+        System.out.println("get value 2 iniciando");
+        spleep(3000);
+
         return CompletableFuture.supplyAsync(() -> {
             try {
                 return processValue2(value);
