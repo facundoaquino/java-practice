@@ -1,0 +1,1 @@
+https://es.stackoverflow.com/questions/42911/cu%C3%A1l-es-el-prop%C3%B3sito-de-las-clases-an%C3%B3nimas-en-java
