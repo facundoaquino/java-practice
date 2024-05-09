@@ -2,6 +2,7 @@ package exercises;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -31,6 +32,12 @@ public class streamsPractice {
                 .max()
                 .getAsInt();
         System.out.println("sum = " + max);
-
+//ind Second Smallest Element in a List
+        Optional<Integer> secondSmallest = numbers.stream()
+                .distinct()
+                .sorted()
+                .skip(1)
+                .findFirst();
+        System.out.println("secondSmallest = " + secondSmallest.get());
     }
 }
